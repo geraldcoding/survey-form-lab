@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Survey Form Lab </title>
+
+<style>
+body{
+    text-align: center;
+    background-color: rgb(163, 163, 163);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+textarea
+{
+    width:100%;
+    border: 10px solid #646464ad;
+    margin:5px 0;
+    padding:3px;
+    border-width: 15 px;
+}
+
+textarea:hover{
+    width:100%;
+    border: 10px rgb(104, 130, 155);
+    margin:5px 0;
+    padding:3px;
+    border-width: 15 px;
+}
+
+#dropdown{
+    border: 10px rgb(255, 255, 255);
+}
+
+#dropdown:hover{
+    border: 10px rgb(45, 156, 247);
+}
+
+input{
+    border: 10px rgb(255, 255, 255);
+}
+
+input:hover{
+    border: 10px rgb(45, 156, 247);
+}
+
+#inputs{
+    border: 10px rgb(255, 255, 255);
+}
+
+#inputs:hover{
+    border: 10px rgb(45, 156, 247);
+}
+
+.question{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+form{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 10px;
+    background-color: rgba(38, 126, 199, 0.801);
+    width: 40%;
+    max-width: 800px;
+    padding: 50px;
+    
+}
+
+#name-label{
+    text-align: left;
+}
+#email-label{
+    text-align: left;
+}
+#number-label{
+    text-align: left;
+}
+#description{
+    font-size: 20px;
+}
+
+</style>
+
+</head>
+
+<header>
+<h1 id="title">PlayStation Survey</h1>
+</header>
+    <body>
+    <p id= "description">Complete the following spaces to tell us what your favorite PlayStaion model is.</p>
+
+    <form id="survey form">
+
+        <p><b>For updates and information fill out the survey below.</b></p>
+
+    <div id="boxa">    
+        <label for="name" id="name-label"><b>Name:</b></label>
+        <input type="text" id="name" name="name" placeholder="First-Name Last-Name" required>
+            <br>
+        <label for="email" id="email-label"><b>Email:</b></label>
+        <input type="text" id="email" name="email" placeholder="example@example.com" required>
+            <br>
+        <label for="number" id="phone-label"><b>Phone Number:</b></label>
+        <input type="number" id="number" name="number" placeholder="9015551738" min="1000000000" max="9999999999" required>
+            <br>
+  
+            <p class="question">Insert a relevant question here?</p>
+
+        <label for="model" id="model"><b>Model Options</b></label>
+            <select id="dropdown">
+                <option value="PS1">PlayStation 1</option>
+                <option value="PS2">PlayStation 2</option>
+                <option value="PS3">PlayStation 3</option>
+                <option value="PS4">PlayStation 4</option>
+                <option value="PS5">PlayStation 5</option>
+                <option value="PSP">PSP</option>
+                <option value="PSGO">PSP Go</option>
+                <option value="PSVita">PS Vita</option>
+            </select>
+        </div>
+            
+            <p class="question">Insert a relevant question here?</p>
+
+            <label for="console edition" id="console edition"><b>Console Edition</b></label>
+            <br>
+            <input id="console edition" type="radio" id="standard" name="console edition" value="standard" >
+            <label for="console edition">Standard Edition</label>
+            <br>
+            <input id="console edition" type="radio" id="slim" name="console edition" value="slim" >
+            <label for="console edition">Slim Edition (Only Available for PS2, PS3, and PS4)</label>
+            <br>
+            <input id="console edition" type="radio" id="pro" name="console edition" value="pro" >
+            <label for="console edition">Pro Edition (Only Available for PS4)</label>
+            <br>
+            <input id="console edition" type="radio" id="digital" name="console edition" value="digital" >
+            <label for="console edition">Digital Edition (Only Available for PS5)</label>
+            <br>
+
+            <p class="question" id="pmodify"><b>Insert a relevant question?</b></p>
+
+            <label for="console_color"><b>Console Color:</b></label>
+            <br>
+
+            <input id="console_color" type="checkbox" id="color" name="console_color" value="black" >
+            <label for="console_color">Sony Black</label>
+            
+            <input id="console_color" type="checkbox" id="color" name="console_color" value="white" >
+            <label for="console_color">Sony White</label>
+            <br>
+            <input id="console_color" type="checkbox" id="color" name="console_color" value="red" >
+            <label for="console_color">Sony Red</label>
+            
+            <input id="console_color" type="checkbox" id="color" name="console_color" value="custom" >
+            <label for="console_color">Sony Custom</label>
+           <br>
+            <input id="console_color" type="checkbox" id="color" name="console_color" value="wrap" >
+            <label for="console_color">Vinyl Wrap</label>
+            
+            <input id="console_color" type="checkbox" id="color" name="console_color" value="cover" >
+            <label for="console_color">Plastic Cover</label>
+            <br>
+            <input id="console_color" type="checkbox" id="color" name="console_color" value="paint" >
+            <label for="console_color">Paint</label>
+            
+            <input id="console_color" type="checkbox" id="color" name="console_color" value="other" >
+            <label for="console_color">Other</label>
+            <br>
+
+            <label id="textarea"><b>Additional Comments</b></label>
+            
+            <textarea for="textarea" rows="10" cols="35" placeholder="Type any additional features that you find worth adding here!"></textarea>
+            <br>
+            <input type="submit" name="submit" value="Submit">
+    </form>
+
+</body>
+</html>
